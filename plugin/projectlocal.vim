@@ -26,7 +26,7 @@ function! s:WalkTreeInternal(dir) " {
 	endif
 
 	" Post-walk evaluation.
-	let l:vimrc = globpath(a:dir, '.vimrc')
+	let l:vimrc = globpath(a:dir, '.lvimrc')
 	if $MYVIMRC !=# l:vimrc && filereadable(l:vimrc)
 		execute 'source ' . l:vimrc
 	endif
